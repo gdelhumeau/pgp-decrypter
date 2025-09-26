@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="lib/jquery-3.7.1.min.js"></script>
+        <script src="lib/openpgp-6.2.2.min.js"></script>
+        <script src="js/script.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/bootstrap-5.3.8.min.css" rel="stylesheet"/>
+        <title>GPG Decrypter</title>
+        <style>
+            label {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>GPG Decrypter</h1>
+            <p>All happens in memory, nothing is saved on disk or sent through the Internet.</p>
+            <form>
+                <div class="mb-3">
+                    <label for="key" class="form-label">Private Key</label>
+                    <textarea class="form-control" id="key" rows="5"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="content" class="form-label">Content to decrypt</label>
+                    <textarea class="form-control" id="content" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" id="decrypt">Decrypt</button>
+                <div class="mb-3 d-none" id="decrypted-box">
+                    <label for="decrypted" class="form-label">Decrypted content</label>
+                    <textarea class="form-control" id="decrypted" rows="20"></textarea>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
